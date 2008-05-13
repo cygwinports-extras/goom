@@ -1,0 +1,95 @@
+goom
+------------------------------------------
+Goom is a visual effects generator for MP3 players such as XMMS.
+
+Runtime requirements:
+  cygwin-1.5.25-11
+  glib-1.2.10-3
+  gtk+-1.2.10-2
+  libSDL12-1.2.13-1
+  xmms-1.2.11-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  autoconf2.5-2.61-1
+  automake1.9-1.9.6-2
+  binutils-20060817-1
+  bison-2.3-1
+  cygport-0.3.10-1
+  flex-2.5.34-1
+  gawk-3.1.6-1
+  gcc-core-3.4.4-3
+  libtool-2.2.2-2
+  make-3.81-1
+  pkg-config-0.21-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://www.ios-software.com/
+
+Canonical download:
+  http://sourceforge.net/projects/goom/files
+
+-------------------------------------------
+
+Build instructions:
+  unpack goom-2004.0-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./goom-2004.0-X.cygport all
+
+This will create:
+  /usr/src/goom-2004.0-X-src.tar.bz2
+  /usr/src/goom-2004.0-X.tar.bz2
+  /usr/src/libgoom2_0-2004.0-X.tar.bz2
+  /usr/src/libgoom2-devel-2004.0-X.tar.bz2
+  /usr/src/xmms-goom2-2004.0-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+(goom)
+  /usr/bin/goom2.exe
+  /usr/share/doc/goom-2004.0/AUTHORS
+  /usr/share/doc/goom-2004.0/COPYING
+  /usr/share/doc/goom-2004.0/ChangeLog
+  /usr/share/doc/goom-2004.0/INSTALL
+  /usr/share/doc/goom-2004.0/NEWS
+  /usr/share/doc/goom-2004.0/README
+
+(libgoom2_0)
+  /usr/bin/cyggoom2-0.dll
+
+(libgoom2-devel)
+  /usr/include/goom/goom.h
+  /usr/include/goom/goom_config.h
+  /usr/include/goom/goom_config_param.h
+  /usr/include/goom/goom_filters.h
+  /usr/include/goom/goom_graphic.h
+  /usr/include/goom/goom_plugin_info.h
+  /usr/include/goom/goom_tools.h
+  /usr/include/goom/goom_typedefs.h
+  /usr/include/goom/goom_visual_fx.h
+  /usr/include/goom/goomsl.h
+  /usr/include/goom/goomsl_hash.h
+  /usr/include/goom/goomsl_heap.h
+  /usr/lib/libgoom2.dll.a
+  /usr/lib/libgoom2.la
+  /usr/lib/pkgconfig/libgoom2.pc
+
+(xmms-goom2)
+  /usr/lib/xmms/Visualization/cygxmmsgoom2.dll
+  /usr/lib/xmms/Visualization/libxmmsgoom2.la
+
+------------------
+
+Port Notes:
+
+----- version 2004.0-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/

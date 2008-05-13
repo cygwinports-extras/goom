@@ -1,0 +1,4 @@
+category: Audio X11
+requires: cygwin libSDL12 glib gtk+ libgoom2_0
+sdesc: "Visual effects generator"
+ldesc: "Goom is a visual effects generator for MP3 players such as XMMS."

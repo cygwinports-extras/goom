@@ -1,0 +1,24 @@
+my_pv=${PVP[0]/00/k}-${PVP[1]}
+
+DESCRIPTION="Goom visual effects generator"
+HOMEPAGE="http://www.ios-software.com/"
+SRC_URI="mirror://sourceforge/${PN}/${PN}-${my_pv}-src.tar.gz"
+SRC_DIR="${PN}${my_pv}"
+
+abi=0
+PKG_NAMES="${PN} lib${PN}2_${abi} lib${PN}2-devel xmms-${PN}2"
+PKG_HINTS="bin lib devel xmms"
+PKG_CONTENTS[0]="usr/bin/*.exe usr/share/doc/"
+PKG_CONTENTS[1]="usr/bin/cyggoom2-${abi}.dll"
+PKG_CONTENTS[2]="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
+PKG_CONTENTS[3]="usr/lib/xmms/"
+
+src_test() {
+	mkdir -p ${B}/test
+	cd ${B}/test
+
+	ln -sf ${S}/src goom
+	verbose gcc ${CFLAGS} -I. -c -o testapp.o ${S}/test/testapp.c || error "testapp.c compile failed"
+	verbose ${B}/libtool --mode=link --tag=CC gcc ${LDFLAGS} -o testapp.exe testapp.o ../src/libgoom2.la || error "testapp.exe link failed"
+	verbose ./testapp || warning "testapp failed"
+}
