@@ -5,13 +5,14 @@ HOMEPAGE="http://www.ios-software.com/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${my_pv}-src.tar.gz"
 SRC_DIR="${PN}${my_pv}"
 
-abi=0
-PKG_NAMES="${PN} lib${PN}2_${abi} lib${PN}2-devel xmms-${PN}2"
-PKG_HINTS="bin lib devel xmms"
-PKG_CONTENTS[0]="usr/bin/*.exe usr/share/doc/"
-PKG_CONTENTS[1]="usr/bin/cyggoom2-${abi}.dll"
-PKG_CONTENTS[2]="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
-PKG_CONTENTS[3]="usr/lib/xmms/"
+PATCH_URI="2004.0-build.patch"
+
+PKG_NAMES="${PN} lib${PN}2_0 lib${PN}2-devel" # xmms-${PN}2"
+libgoom2_0_CONTENTS="usr/bin/cyggoom2-0.dll usr/share/doc/"
+libgoom2_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
+#xmms_goom_CONTENTS="usr/bin/goom2.exe usr/lib/xmms/"
+
+ACLOCAL_FLAGS="-I m4"
 
 src_test() {
 	mkdir -p ${B}/test

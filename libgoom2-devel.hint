@@ -1,5 +1,5 @@
 category: Audio
 requires: libgoom2_0
 external-source: goom
-sdesc: "Visual effects generator (devel)"
+sdesc: "Visual effects generator library (devel)"
 ldesc: "Goom is a visual effects generator for MP3 players such as XMMS."

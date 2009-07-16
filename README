@@ -3,25 +3,22 @@ goom
 Goom is a visual effects generator for MP3 players such as XMMS.
 
 Runtime requirements:
-  cygwin-1.5.25-11
-  glib-1.2.10-3
-  gtk+-1.2.10-2
-  libSDL12-1.2.13-1
-  xmms-1.2.11-1
+  cygwin-1.7.0-51
+  libgcc1-4.3.2-2
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.61-1
-  automake1.9-1.9.6-2
-  binutils-20060817-1
+  autoconf2.5-2.63-10
+  automake1.9-1.9.6-10
+  binutils-2.19.51-1
   bison-2.3-1
-  cygport-0.3.10-1
-  flex-2.5.34-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  libtool-2.2.2-2
-  make-3.81-1
-  pkg-config-0.21-1
+  cygport-0.9.7-1
+  flex-2.5.35-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  libtool-2.2.7a-14
+  make-3.81-2
+  pkg-config-0.23b-10
   sed-4.1.5-2
 
 Canonical website:
@@ -41,26 +38,20 @@ Build instructions:
 
 This will create:
   /usr/src/goom-2004.0-X-src.tar.bz2
-  /usr/src/goom-2004.0-X.tar.bz2
   /usr/src/libgoom2_0-2004.0-X.tar.bz2
   /usr/src/libgoom2-devel-2004.0-X.tar.bz2
-  /usr/src/xmms-goom2-2004.0-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary packages:
 
-(goom)
-  /usr/bin/goom2.exe
-  /usr/share/doc/goom-2004.0/AUTHORS
-  /usr/share/doc/goom-2004.0/COPYING
-  /usr/share/doc/goom-2004.0/ChangeLog
-  /usr/share/doc/goom-2004.0/INSTALL
-  /usr/share/doc/goom-2004.0/NEWS
-  /usr/share/doc/goom-2004.0/README
-
 (libgoom2_0)
   /usr/bin/cyggoom2-0.dll
+  /usr/share/doc/goom/AUTHORS
+  /usr/share/doc/goom/COPYING
+  /usr/share/doc/goom/ChangeLog
+  /usr/share/doc/goom/NEWS
+  /usr/share/doc/goom/README
 
 (libgoom2-devel)
   /usr/include/goom/goom.h
@@ -79,16 +70,12 @@ Files included in the binary packages:
   /usr/lib/libgoom2.la
   /usr/lib/pkgconfig/libgoom2.pc
 
-(xmms-goom2)
-  /usr/lib/xmms/Visualization/cygxmmsgoom2.dll
-  /usr/lib/xmms/Visualization/libxmmsgoom2.la
-
 ------------------
 
 Port Notes:
 
------ version 2004.0-1 -----
-Initial release for Cygwin.
+----- version 2004.0-10 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:
