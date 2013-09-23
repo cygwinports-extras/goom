@@ -1,5 +1,0 @@
-category: Audio
-requires: libgcc1
-external-source: goom
-sdesc: "Visual effects generator library (runtime)"
-ldesc: "Goom is a visual effects generator for MP3 players such as XMMS."

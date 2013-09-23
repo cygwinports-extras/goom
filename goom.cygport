@@ -1,13 +1,17 @@
-my_pv=${PVP[0]/00/k}-${PVP[1]}
-
-DESCRIPTION="Goom visual effects generator"
+NAME="goom"
+VERSION=2004.0
+RELEASE=10
+my_v=2k4-0
+CATEGORY="Libs"
+SUMMARY="Visual effects generator library"
+DESCRIPTION="Goom is a visual effects generator for MP3 players such as XMMS."
 HOMEPAGE="http://www.ios-software.com/"
-SRC_URI="mirror://sourceforge/${PN}/${PN}-${my_pv}-src.tar.gz"
-SRC_DIR="${PN}${my_pv}"
+SRC_URI="mirror://sourceforge/goom/goom-${my_v}-src.tar.gz"
+SRC_DIR="goom${my_v}"
 
 PATCH_URI="2004.0-build.patch"
 
-PKG_NAMES="${PN} lib${PN}2_0 lib${PN}2-devel" # xmms-${PN}2"
+PKG_NAMES="libgoom2_0 libgoom2-devel" # xmms-goom2"
 libgoom2_0_CONTENTS="usr/bin/cyggoom2-0.dll usr/share/doc/"
 libgoom2_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
 #xmms_goom_CONTENTS="usr/bin/goom2.exe usr/lib/xmms/"
